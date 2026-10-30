@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALC-01 Calculator</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="wrap">
+
+    <!-- The calculator -->
+    <section class="calculator">
+      <header class="calc-top">
+        <span class="brand">CALC-01</span>
+        <button class="theme-btn" id="themeBtn" aria-label="Switch light and dark theme">◐</button>
+      </header>
+
+      <!-- Screen -->
+      <div class="screen">
+        <p class="expression" id="expression"></p>
+        <p class="result" id="result" aria-live="polite">0</p>
+      </div>
+
+      <!-- Keypad: one listener in JavaScript reads data-action and data-value -->
+      <div class="keypad" id="keypad">
+        <button class="key fn" data-action="clear">AC</button>
+        <button class="key fn" data-action="delete" aria-label="Delete last digit">⌫</button>
+        <button class="key fn" data-action="percent">%</button>
+        <button class="key op" data-action="operator" data-value="/">÷</button>
+
+        <button class="key" data-action="digit" data-value="7">7</button>
+        <button class="key" data-action="digit" data-value="8">8</button>
+        <button class="key" data-action="digit" data-value="9">9</button>
+        <button class="key op" data-action="operator" data-value="*">×</button>
+
+        <button class="key" data-action="digit" data-value="4">4</button>
+        <button class="key" data-action="digit" data-value="5">5</button>
+        <button class="key" data-action="digit" data-value="6">6</button>
+        <button class="key op" data-action="operator" data-value="-">−</button>
+
+        <button class="key" data-action="digit" data-value="1">1</button>
+        <button class="key" data-action="digit" data-value="2">2</button>
+        <button class="key" data-action="digit" data-value="3">3</button>
+        <button class="key op" data-action="operator" data-value="+">+</button>
+
+        <button class="key fn" data-action="sign" aria-label="Change sign">±</button>
+        <button class="key" data-action="digit" data-value="0">0</button>
+        <button class="key" data-action="decimal">.</button>
+        <button class="key equals" data-action="equals">=</button>
+      </div>
+    </section>
+
+    <!-- History tape -->
+    <aside class="tape">
+      <div class="tape-head">
+        <h2>History</h2>
+        <button class="clear-history" id="clearHistory">Clear</button>
+      </div>
+      <ul id="historyList"></ul>
+    </aside>
+
+  </main>
+
+  <!-- External JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
