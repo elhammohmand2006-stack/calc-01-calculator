@@ -2,7 +2,7 @@
 
 A responsive calculator built with HTML, CSS and vanilla JavaScript. It supports chained calculations, keyboard input, a history tape, and light and dark themes.
 
-**Live demo:** https://YOUR-USERNAME.github.io/calc-01-calculator/
+**Live demo:** https://elhammohmand2006-stack.github.io/calc-01-calculator/
 
 ## Features
 
